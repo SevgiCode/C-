@@ -1,0 +1,44 @@
+ATM
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int option;
+        double result = 0;
+        double withdraw = 0;
+        double deposit = 0;
+       double balance = 1000;
+        Console.WriteLine ("***********");
+        Console.WriteLine ("ATM Machine");
+        Console.WriteLine ("***********");
+       Console.WriteLine("Select Option");
+       Console.WriteLine("1 for Balance \n 2 for Withdraw \n 3 for Deposite \n 4 for Exit");
+       option = int.Parse(Console.ReadLine());
+       while(true){
+         switch(option)
+         {
+             case 1 :
+            
+             Console.WriteLine("Your balance:  " + balance);break;
+             case 2 :
+             Console.WriteLine("How much you want to withdraw?");
+             withdraw = Convert.ToDouble(Console.ReadLine());
+             result = balance - withdraw;
+              Console.WriteLine(" result: " + result );
+              break;
+             case 3 :
+             Console.WriteLine("How much id the deposite? ");
+             deposit = Convert.ToDouble(Console.ReadLine());
+             result = balance + deposit;
+              Console.WriteLine("Your result: = " + result);
+              break;
+             
+         }
+       
+        Console.ReadKey();
+    }
+    }
+}         
