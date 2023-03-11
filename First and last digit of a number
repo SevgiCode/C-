@@ -1,0 +1,30 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int temp = new int();
+        int first = new int();
+        int last = new int();
+     
+            Console.WriteLine ("Enter a number: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+             temp = a;
+            if(temp > 0)
+            {
+               last = temp % 10;
+               temp = temp / 10;
+                while(temp > 10)
+                {
+                    temp = temp / 10;
+                      first = temp % 10;
+                }
+              
+            }else{
+                Console.WriteLine("Enter a number bigger than 0");
+            }
+            
+        Console.WriteLine(first + " and " + last);
+    }
+}   
